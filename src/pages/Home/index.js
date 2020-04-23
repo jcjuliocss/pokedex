@@ -90,18 +90,21 @@ export default function Home(){
         <div className="home-container">
             <header>
                 <h1>Pokédex</h1>
-                <form onSubmit={pokemonSearch} className="search-pokemon">
-                    <button className="btn-search-pokemon" type="submit">
-                        <FiSearch size={17} color="#737380" />
-                    </button>
+            </header>
+
+            <section className="search-pokemon">
+                <form onSubmit={pokemonSearch}>
                     <input
                         className="input-pokemon-name"
                         placeholder="Nome ou ID do Pokémon"
                         value={pokemonNameOrId}
                         onChange={event => setPokemonNameOrId(event.target.value)}
                     />
+                    <button className="btn-search-pokemon" type="submit">
+                        <FiSearch size={17} color="#737380" />
+                    </button>
                 </form>
-            </header>
+            </section>
 
             <ul>
                 {pokemonList.map(pokemon => (

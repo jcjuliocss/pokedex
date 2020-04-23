@@ -11,13 +11,18 @@
 }
 
 .home-container header h1{
-    font-size: 20px;
+    font-size: 30px;
     margin: auto;
     margin-bottom: 50px;
 }
 
 .home-container header a{
     text-decoration: none;
+}
+
+.home-container .search-pokemon{
+    margin-left: 890px;
+    margin-bottom: 10px;
 }
 
 .home-container .search-pokemon .btn-search-pokemon{
@@ -73,7 +78,7 @@
     display: flex;
     justify-content: center;
     padding-right: 30px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .navigation button{
