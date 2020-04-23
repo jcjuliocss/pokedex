@@ -15,22 +15,22 @@ export default function Detail(){
     const [weight, setWeight] = useState(0.0)
 
     useEffect(() => {
-        function getPokemon(){
+        async function getPokemon(){
             const urlPokemon = localStorage.getItem('pokemon_url')
-            api.get(urlPokemon).then(response => {
+            try{
+                const response = await api.get(urlPokemon)
                 setName(response.data.name)
                 setSprite(response.data.sprites.front_default)
                 setHeight(response.data.height)
                 setPokeId(response.data.id)
                 setWeight(response.data.weight)
-            })
+            }catch{
+                alert('Pokémon não encontrado.')
+                back()
+            }
         }
 
-        async function waitPokemon(){
-            await getPokemon()
-        }
-
-        waitPokemon()
+        getPokemon()
     }, [])
 
     function back(){
