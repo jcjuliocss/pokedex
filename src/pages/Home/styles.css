@@ -21,7 +21,6 @@
 }
 
 .home-container .search-pokemon{
-    margin-left: 890px;
     margin-bottom: 10px;
 }
 
@@ -85,4 +84,28 @@
     padding: 5px;
     border: 1px solid #737380;
     border-radius: 4px;
+}
+
+@media(max-width: 890px){
+    .home-container ul{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 660px){
+    .home-container ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 510px){
+    .home-container ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 365px){
+    .home-container ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
